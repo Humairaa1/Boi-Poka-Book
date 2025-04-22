@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default function Book({book}) {
 
-    const {bookName,author, image} = book;
+    const {bookId, bookName,author, image} = book;
 
     return (
-        <Link>
+        <Link to={`/books/${bookId}`} className='hover:scale-105 duration-300'>
         <div className="card bg-base-100 shadow-sm p-6">
             <figure className='bg-gray-100 py-10 rounded-2xl'>
                 <img
