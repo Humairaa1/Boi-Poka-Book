@@ -6,11 +6,19 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from './Component/Root/Root.jsx';
+import Home from './Component/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <div>Page not found</div>,
+    children:[
+      {
+        path: "/",
+        element: <Home></Home>
+      }
+    ]
   },
 ]);
 

@@ -1,9 +1,14 @@
 import React from 'react'
+import Navbar from '../Navbar'
+import { Outlet } from 'react-router-dom'
+import Footer from '../Footer'
 
 export default function Root() {
   return (
     <div>
-      <h1 className='text-3xl'>Root is here</h1>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   )
 }
